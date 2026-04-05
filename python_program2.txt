@@ -1,0 +1,169 @@
+"""#using flag
+a="tell me something that you want me to repeat"
+a+="\nif you want to stop write quit:"
+a2=True
+while a2:
+    m=input(a)
+    if m=="quit":
+        a2=False
+    else:
+        print(m)
+#using break 
+a3="write a word or a line you want me to repeat"
+a3+="\nwrite quit ro stop"
+a4=True
+while a4:
+    n=input(a3)
+    if n=="quit":
+        break
+    else:
+        print(n)
+#using continue statement
+i=0
+while i<10:
+    i+=1
+    if i%2==0:
+        continue
+    print(i)
+#while loop using list and dictionary
+#1 moving items from one list to another
+univited_one=["Ayesha","Pallavi","Punam"]
+invited_one=[]
+while univited_one:
+    current=univited_one.pop()
+    print(f"Yes you can come in the party,{current}")
+    invited_one.append(current)
+print("These people are invited to my party")
+for i in invited_one:
+    print(i)
+#removing repeated word in a list
+my_orders=["lipgloss","sunscreen","eyeliner","lipgloss","lipliner","lipstick","Lipgloss","dress","nutella","chocolate"]
+print(my_orders)
+while "lipgloss" in my_orders:
+    my_orders.remove("lipgloss")
+print(my_orders)
+#filling user input using dictionary
+responses={}
+answer=True
+while answer:
+    name=input("Heyyaa girllyy💅, please enter your name 😊👉")
+    lipstick=input("Write the name of your lipstick shade💄")
+    responses[name]=lipstick
+    answer2=input("Would you like to pass these question to another girllyyy?💄💅❤️😍 (yes/no)")
+    if answer2=="no":
+        answer=False
+    else:
+        print("Okhayyy😍💅")
+print("Here are you all girlies's💅 name and their shades of lipstick💄")
+for i,j in responses.items():
+    print(f"Heyyy {i} 😍, your shade👉💕 {j}")
+#FUNCTION
+def user(user_name):
+    print(f"Hello user👋 {user_name.title()}")
+user("anjana123")
+#multiple function calls
+def order(user,order):
+    print(f"Hi👋,{user}")
+    print(f"Your order is😊👉 {order}")
+order("Ayesha","chocolate")
+order("Punam","rice")
+#return in function
+def add(a,b):
+    c=a+b
+    return c
+s=add(8,9)
+print(s)
+def name(full,last):
+    full_name=f"{full} {last}"
+    return full_name
+a=name("Ayesha","Kumari")
+print(a)
+#returning in dictionary
+def name(first,last):
+    p={"first name":first,"last name":last}
+    return p
+full_name=name("ayesha","kumari")
+print(full_name)
+#stroring information
+def name(first,last,age):
+    p={"first name":first,"last name":last}
+    if age:
+        p["age"]=age
+    return p
+full_name=name("ayesha","kumari",20)
+print(full_name)
+#using function with while loop
+def order(name,o):
+    a=f"{name} {o}"
+    return a
+while True:
+    print("Hi, enter your name and order")
+    print("(enter 'd' if you are done)")
+    n2=input("enter name")
+    if n2=="d":
+        break
+    n3=input("enter your order")
+    if n3=="d":
+        break
+    o1=order(f"Hi,{n2} your order is  {n3}")
+    print(o1)
+#function in list
+def people(names):
+    for i in names:
+        m=f"Heyy,{i.title()}"
+        print(m)
+n=["ayesha","pallavi","punam"]
+people(n)
+#modifying list using function
+def invite(invited,not_invited):
+    while invited:
+        a=invited.pop()
+        print(f"yes {a}")
+        not_invited.append(a)
+def now_invited(not_invited):
+    print("people thay are now invited:")
+    for i in not_invited:
+        print(i)
+invited=["Shakira","Beyonce","Ariana"]
+not_invited=[]
+invite(invited,not_invited)
+now_invited(not_invited)
+#passing argument with single parameter
+def order(*o):
+    print(o)
+order("maggie","fish","chocchips")
+def order(*o):
+    print("your orders:")
+    for i in o:
+        print(i)
+order("mango","cheesecake","cold drink")
+def orders(name,*order):
+    # print(f"Hi,{name} your orders:")
+    for i in order:
+        print(i)
+orders("Ayesha","lip gloss","lipstick","chocolate")
+orders("Minki","dress","cake")
+#arbitary keyword argument
+def student_profile(first,last,**mor_info):
+    mor_info["first"]=first
+    mor_info["last "]=last
+    return mor_info
+profile=student_profile("Ayesha","Kumari",Class=12,Stream="Datascience",Year="first")
+print(profile)
+#making a file - food201.py
+def food(name,*food):
+    print(f"Hi {name} , your fav foods:")
+    for i in food:
+        print(i)
+# then making another file import food 201
+import food201
+food201.food("Ayesha","chicken  curry","chicken roll")
+#importing specific function
+from food201 import food
+food("Ayou","khichri","daal")
+#giving function a specific name
+from food201 import food as fq
+fq("Krishna","Makhan","Dudh")
+#giving module a different name
+import food201 as f2
+f2.food("Anchal","vege","egg")"""
