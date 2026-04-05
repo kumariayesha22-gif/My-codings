@@ -1,0 +1,92 @@
+#class and object
+class desings:
+    def __init__(self,designer_name,dress,year):
+        self.designername=designer_name
+        self.dress=dress
+        self.year=year
+    def get_whole_info(self):
+        info=f"desinger name={self.designername} , dress name={self.dress} , dress's year={self.year}"
+        return info
+info2=desings("Manish Malohtra","Lehenga",1990)
+print(info2.get_whole_info())
+#setting a default value
+class paint:
+    def __init__(self,colour,quantity):
+        self.colour=colour
+        self.quantity=quantity
+        self.company="asian"
+    def colour_info(self):
+        info=f"colour={self.colour} quantity={self.quantity} ,"
+        return info.title()
+    def default_value(self):
+        print(f"This paint is of {self.company} brand")
+info2=paint("blue","1 l")
+print(info2.colour_info())
+info2.default_value()
+#modifying attributes in class
+class paint:
+    def __init__(self,colour,litre):
+        self.colour=colour
+        self.litre=litre
+        self.number=2
+    def colour_info(self):
+        info=f"colour={self.colour} quantity={self.litre} ,"
+        return info.title()
+    def default_value(self):
+        print(f"there are {self.number} paints") 
+info2=paint("blue","1 l")
+print(info2.colour_info())
+info2.default_value()
+#modifying attribute vallues directly
+class paint:
+    def __init__(self,colour,litre):
+        self.colour=colour
+        self.litre=litre
+        self.number=2
+    def colour_info(self):
+        info=f"colour={self.colour} quantity={self.litre} ,"
+        return info.title()
+    def default_value(self):
+        print(f"there are {self.number} paints") 
+info2=paint("blue","1 l")
+print(info2.colour_info())
+info2.number=4
+info2.default_value()
+#modifying attribute through a method
+class paint:
+    def __init__(self,colour,litre):
+        self.colour=colour
+        self.litre=litre
+        self.number=2
+    def colour_info(self):
+        info=f"colour={self.colour} quantity={self.litre} ,"
+        return info.title()
+    def default_value(self):
+        print(f"there are {self.number} paints") 
+    def update_default_value(self,number2):
+        self.number=number2
+info2=paint("blue","1 l")
+print(info2.colour_info())
+info2.update_default_value(8)
+info2.default_value()
+#incrementing attribute values through method
+class paint:
+    def __init__(self,colour,litre):
+        self.colour=colour
+        self.litre=litre
+        self.number=2
+    def colour_info(self):
+        info=f"colour={self.colour} quantity={self.litre} ,"
+        return info.title()
+    def default_value(self):
+        print(f"there are {self.number} paints")
+    def increment_value(self,num3):
+        self.number+=num3
+info2=paint("blue","1 l")
+print(info2.colour_info())
+info2.increment_value(30)
+info2.default_value()"""
+
+
+
+
